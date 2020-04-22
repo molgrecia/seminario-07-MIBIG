@@ -1,8 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  body>
-    <h1 class="main-title">Supervivientes del Titanic </h1>
-    <h4 class="main-autor">Nombre: Raul Reyero</h3>
-    <h4 class="main-url">Url: <a href="https://js-aauhmw-titanic.stackblitz.io/">https://js-aauhmw-titanic.stackblitz.io/</a></h3>
-    <h4 class="main-fuente">Fuente: <a href="https://www.kaggle.com/francksylla/titanic-machine-learning-from-disaster/data">https://www.kaggle.com/francksylla/titanic-machine-learning-from-disaster/data</a></h3>
-    <h4 class="main-fecha">
+
+<head>
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+
+    <style>
+        h1 {
+            background-color: powderblue;
+            color: black;
+            font-family: Helvetica, sans-serif;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        h2 {
+            font-size: 1.4em;
+            text-transform: uppercase;
+            font-family: Helvetica;
+            color: #000;
+            margin-top: 0;
+        }
+        h3 {
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+        h4 {
+            font-family: Helvetica, sans-serif;
+            text-align: left;
+        }
+        div.text {
+            font-family: Helvetica;
+            padding: 5px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cabecera">
+        <a href="/"><img src="https://daks2k3a4ib2z.cloudfront.net/57c1a412f69ff41454c51d0a/57c1a4ae52f6a18001eda515_PRACTICA_LOGO_FINAL.png"/></a>
+
+            <h1 class="main-title">  ¿Merece la pena estudiar en España en los últimos años? </h1>
+    <h4 class="main-autor">Nombre: Mercedes Olmedo</h3>
+    <h4 class="main-url">Url: <a href="https://js-hvtdte.stackblitz.io">https://js-hvtdte.stackblitz.io/</a></h3>
+    <h4 class="main-fuente"</h4>Fuentes: 
+      <ul>
+        <li><a href="https://www.educacionyfp.gob.es/servicios-al-ciudadano/estadisticas/universitaria/estadisticas.html">https://www.educacionyfp.gob.es/servicios-al-ciudadano/estadisticas/universitaria/estadisticas.html</a> </li>
+        <li><a href="https://www.ine.es/dyngs/INEbase/listaoperaciones.htm"> https://www.ine.es/dyngs/INEbase/listaoperaciones.htm</a></li>
+        <li><a href="https://data.oecd.org/emp/employment-by-education-level.htm">https://data.oecd.org/emp/employment-by-education-level.htm </a></li>  
+        </ul>
+    </div>
+    <div class="summary">
+        <h2 class="text-title">Resumen</h2>
+        <div class="text">
+El objetivo de este proyecto es dar respuesta a la pregunta planteada de si merece la pena estudiar en España. En este caso se enfoca directamente a si merece la pena estudiar una carrera universitaria.Para poder responder a ello con visualizaciones se han utilizado distintos datasets de diferentes fuentes como el ministerio de educación, el INE o la OCDE. 
+<br>
+Mi objetivo es comunicar que merece la pena estudiar en España, sin embargo, hay que tener en cuenta distinto factores como el coste que supone estudiar, que titulaciòn tiene más salidas, y como es decisivo frente a las cifras del paro. 
+
+<table width="900" height: "80" cellspacing="1" cellpadding="3" border="0" bgcolor="#1E679A">
+<tr>
+   <td><font color="#FFFFFF" face="arial, verdana, helvetica">
+<b>Audiencia</b>
+   </font></td>
+</tr>
+<tr>
+   <td bgcolor="#ffffff">
+   <font face="arial, verdana, helvetica">
+   Mi público objetivo son estudiantes interesados en saber qué rama escoger, qué ramas tienen más futuro a la hora de conseguir un trabajo, cuanto les costará estudiar y si merece la pena hacerlo en
+   </font>
+   </td>
+</tr>
+</table>
+<br>
+
+<h2>1. Ocupación y paro </h2>       
+   <p>El primer gráfico es la media del nivel de ocupados en España, según el nivel de estudios que han alcanzado. Para poder hacer esta comparativa he escogido un gráfico de tartas múltiple hecho con Datawrapper. <br> Para poder hacer este gráfico he tenido que cambiar en datawrapper los datos a porcentajes y cambiar el color de los labels. <br> <br>
+   <i>*Los ocupados dentro de la población activa son aquellos que tienen empleo </i> <br><br>
+   <iframe title="Ocupados por nivel de formaci&oacute;n alcanzado" aria-label="Interactive pie chart" src="//datawrapper.dwcdn.net/ORQB6/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="380"></iframe><br><br>
+
+   El segundo gráfico trata de las mismas categorías, pero al contrario hace la comparación con las cifras de desempleo. Para hacer esto, he utilizado Tableau, y un gráfico de barras apiladas, ya que son varias categorías y años, me pareció interesante para comparar cantidades totales. 
+  <br><br>
+
+<!-- gráfico con tableau public -->
+
+   <div class='tableauPlaceholder' id='viz1587583468408' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;datosparo&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='datosparo&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;datosparo&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1587583468408');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+   <br>
+   <iframe src="https://data.oecd.org/chart/5VGE" width="860" height="645" style="border: 0" mozallowfullscreen="true" webkitallowfullscreen="true" allowfullscreen="true"><a href="https://data.oecd.org/chart/5VGE" target="_blank">OECD Chart: Employment by education level, Below upper secondary / Tertiary, % of 25-64 year-olds, Annual, 2015 – 2018</a></iframe> <br>
+
+   <p> Esta gráfica esta hecha en la web de la OCDE, simplemente hay que escoger los datos que se quieren representar. En este caso escogí, los países miembros de la UE, nivel de estudios menos de secundaria y estudios superiores.</p>
+   <br>
+   <strong> Conclusión: </strong> Como bien se puede observar en el primer gráfico a lo largo de los años prácticamente no hay evoluciones entre las cifras de cada categoría. Sin embargo, queda claro que la única que ha aumentado son los ocupados con un nivel de formación superior. El segundo gráfico nos enseña lo mismo pero con las cifras del paro, es decir a más formación menos paro. Por tanto, se nos presenta un motivo de merecer la pena de continuar los estudios.</p> <br>
+
+  <h2>2. Carreras </h2>
+            <p>El siguiente gráfico nos muestra la importancia que tiene la rama del conocimiento que se escoja para estudiar. En él, podemos ver la tasa de paro según la titulación. </p><br>
+            Esta gráfica la he hecho con Google Sheets, es una simple gráfica de barras ya que son datos pequeños y no hay muchas categorías. Lo principal es mostrar una comparativa. 
+
+            <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT9QHG9Jk6eWzxzC8tvLRL1wAJWW-uJCo1_nWBfqB9dMdD6a_SBbNEX1Csu4iIJ3pMJC1yRxQY6JU0e/pubchart?oid=1218763694&amp;format=interactive"></iframe>
+ <br>
+   <p><strong> Conclusión: </strong> Podemos ver las carreras afines a Ciencias de la salud e Ingeniería, son las que menos paro tienen. Por tanto, tenemos otro motivo por el que continuar los estudios en España. Sin embargo, debemos tener en cuenta que si escojemos una de humanidades tenemos más probabilidad de que tenga menos salidas la laborales.</p> <br>
+   
+  <h2>3.Coste</h2>
+    <p>Un tema a tener en cuenta es el precio de estudiar en España. Es un sistema con la mayoría de universidades públicas. Por tanto, lo que hay que comprobar es cuánto cuesta estudiar en España</p> <br>
+    <p> ello presento el siguiente mapa de comunidades autonomas hecha con el precio medio del crédito en las universidades. Lo he hecho con flourish, que tiene una gran variedad de gráficas interactivas.Además, del mapa tiene un buscador para encontrar la comunidad autónoma.</p> <br>
+    
+  <div class="flourish-embed flourish-map" data-src="visualisation/2045424" data-url="https://flo.uri.sh/visualisation/2045424/embed"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+   
+</body>
+</html>
